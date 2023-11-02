@@ -27,8 +27,8 @@ export class AppService {
     console.log(disk)
     let data = []
     for (let index = 0; index < disk.length; index++) {
-      // const res = this.indexToHexagon(disk[index])
-      // data.push(res)
+      const res = this.indexToHexagon(disk[index])
+      data.push(res)
     }
     return data
    

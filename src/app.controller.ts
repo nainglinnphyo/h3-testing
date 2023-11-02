@@ -56,4 +56,15 @@ export class AppController {
       }, ms);
     });
   }
+
+  @Get('latLng-to-boundary')
+  latLngToBoundary(@Query() data:{lat:string,lng:string}){
+    return this.appService.latLngToBoundary(data.lat,data.lng);
+  }
+
+  @Get('latLng-to-near-by-boundary')
+  latLngToNearByBoundary(@Query() data:{lat:string,lng:string}){
+    return this.appService.latLngToNearByBoundary(data.lat,data.lng);
+  }
+
 }
